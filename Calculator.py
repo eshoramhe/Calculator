@@ -173,4 +173,9 @@ if st.button("Calculate", use_container_width=True, type="primary", key="calcula
         except NameError as e:
             st.error(f"Error: Unsupported function or variable used. {e}. Please use only allowed functions.")
         except ZeroDivisionError:
-            st.error("Er
+            st.error("Error: Division by zero is not allowed.")
+        except Exception as e:
+            st.error(f"An unexpected error occurred: {e}")
+
+st.markdown("---")
+st.info("Developed with Streamlit for advanced calculations.")
